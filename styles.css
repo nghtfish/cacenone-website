@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Soleto", sans-serif;
+  src: url("a.eot");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Soleto", sans-serif;
+  src: url("b.eot");
+  font-weight: 400;
+}
+* {
+  font-family: "Soleto";
+  font-size: 1em;
+  color: #236092;
+  border: none;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 2em;
+  width: 100%;
+  height: 96px;
+  background: #ffffff;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.03);
+  z-index: 2;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+header button {
+  padding: 1em;
+  border-radius: 1em;
+  background: none;
+}
+header button:hover:enabled {
+  text-decoration: underline;
+  cursor: pointer;
+}
+header button:disabled {
+  box-shadow: inset 0 0 0 50px #deecf7;
+}
+header button:hover:disabled {
+  background: none;
+  box-shadow: inset 0 0 0 3px #deecf7;
+}
+#hero {
+  width: 100%;
+  background-color: #f9f8f0;
+}
+#hero.main {
+  height: 800px;
+  padding-top: 96px;
+  background-image: url("puzzle-bg.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+#hero .wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.hero-left {
+  width: calc(1200px / 4);
+  padding-right: 8px;
+}
+.hero-right {
+  width: calc(1200px - (1200px / 4));
+  padding-left: 8px;
+}
+#hero img {
+  width: 100%;
+}
+h1 {
+  font-weight: 700;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 3em 0;
+}
+.heading p {
+  font-weight: 400;
+  font-size: 1.75em;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4em;
+  gap: 255px;
+
+  width: 100%;
+  height: 120px;
+
+  background: #f9f8f0;
+}
+#legal {
+  padding: 1em 4em;
+}
+sup {
+  font-size: 1rem;
+}
+
+.visual {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  justify-content: space-around;
+  padding: 4em;
+}
+.visual .card {
+  flex-basis: 45%;
+}
+.card .card-red {
+  padding: 1.5em;
+  border: 3px solid #d62242;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 1.25em;
+  text-align: center;
+  color: #236092;
+}
+.has-tooltip {
+  cursor: pointer;
+  position: relative;
+}
+.has-tooltip .tooltiptext {
+  display: none;
+  max-width: 512px;
+  min-width: 320px;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #7a7a7a;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.has-tooltip .tooltiptext.active {
+  display: block;
+}
